@@ -1,0 +1,170 @@
+/* Colors */
+/* #071e3d */
+/* #1f4287 */
+/* #278ea5 */
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+/* Fix Logo on Extreme Left */
+header {
+  position: fixed; /* Ensures it stays fixed on scroll */
+  top: 12px; /* Small padding from the top */
+  left: 10px; /* Aligns the logo to the extreme left */
+  z-index: 1000; /* Ensure it appears above other elements */
+  display: flex;
+  align-items: center;
+}
+
+/* Logo Container */
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Aligns content to the start (left) */
+}
+
+/* Logo Styling */
+.logo {
+  width: 75px; /* Adjust the size as needed */
+  height: auto;
+  border-radius: 50%; /* Optional: Make the logo circular */
+  transition: all 0.3s ease-in-out; /* Smooth scaling */
+  margin-right: 10px; /* Space between logo and nav bar */
+}
+
+.logo:hover {
+  transform: scale(1.1); /* Slight hover effect */
+}
+
+/* Styles for Navigation Bar */
+nav {
+  position: fixed;
+  top: -2px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Logo on the left, nav links on the right */
+  align-items: center;
+  padding: 2px 5px; 
+  z-index: 100;
+  padding-right: 38%;
+}
+
+/* Navigation Buttons */
+.roadmap-btn {
+  background-color: #1C1C1C; 
+  color: #f0f0f0; 
+  font-family: 'Garet', sans-serif;
+  font-size: 18px;
+  padding: 12px 32px;
+  border-radius: 40px; /* Rounded corners */
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase; /* Ensures text is capitalized */
+  transition: all 0.3s ease; /* Adds transition for hover effect */
+}
+
+.roadmap-btn:hover {
+  background-color: #333333; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Navigation Links */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px; /* Space between nav items */
+  margin: 0;
+  padding: 40px;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #1c1c1c; /* Button background */
+  padding: 20px 30px; /* Button padding */
+  border-radius: 25px; /* Rounded buttons */
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #333333; /* Slightly lighter on hover */
+  transform: scale(1.05); /* Slight hover effect */
+}
+
+/* Additional Styling for Body */
+body {
+  background-color: #000000;
+  font-family: 'Garet', sans-serif;
+  padding: 0;
+  margin: 0;
+  background-image: url('images/bg_pg03.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+  
+.title {
+    color: white;
+    padding: 12px;
+    text-align: center;
+    padding-top: 95px;
+    font-style: italic;
+    font-family: 'Garet', sans-serif;
+    font-size: 45px;
+  }
+  
+  #filter-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 12px;
+  }
+  
+  .filter-element {
+    background-color: #0f0f0f;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 20px;
+    margin: 6px;
+    cursor: pointer;
+  }
+  
+  .filter-element:hover {
+    background-color: #282828aa;
+  }
+  
+  .filter-active {
+    background-color: #222222;
+  }
+  
+  #gallery-container {
+    width: 90%;
+    margin: 0 auto;
+    column-count: 3;
+    column-gap: 0.5rem;
+  }
+  
+  .gallery-image {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .gallery-image.hide-image {
+    display: none;
+  }
+  
+  @media (max-width: 920px) {
+    #gallery-container {
+      column-count: 2;
+    }
+  }
