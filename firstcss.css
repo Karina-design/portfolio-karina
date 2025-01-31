@@ -1,0 +1,553 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Garet', sans-serif;
+    box-sizing: border-box;
+
+}
+html {
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #080808;
+    color: #fff;
+}
+
+#header{
+    width: 80%; 
+    height: 100vh;
+    background-image: url(assets/bg_image.png);
+    background-size: cover;
+    background-position: center;
+}
+#container{
+    padding: 10px 20%;
+    position: fixed;
+}
+
+nav{
+   position: relative;
+   position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100; /* Ensures it's on top of everything */
+    padding: 10px 0;
+    padding-left: 600px;
+}
+
+.roadmap-btn {
+    background-color: #1C1C1C; /* Dark background */
+    color: #f0f0f0; /* Light text color */
+    font-family: 'Garet', sans-serif;
+    font-size: 18px;
+    padding: 12px 32px;
+    border-radius: 40px; /* Rounded corners */
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase; /* Ensures text is capitalized */
+    transition: all 0.3s ease; /* Adds transition for hover effect */
+    position: relative;
+    position: fixed;
+
+}
+
+.roadmap-btn:hover {
+    background-color: #333333; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+.logo_white{
+    width: 70px;
+    position: relative;
+    position: fixed;
+    top: 10px; /* Adjust the top spacing */
+    left: 10px;
+    z-index: 10;
+}
+
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 20px 20px;
+    position: fixed;
+    position: relative;
+    z-index: 10;
+}
+
+.semi-transparent-box {
+    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; /* Adjust height as needed */
+    z-index: 5; /* Ensure it is behind the buttons and logo */
+}
+
+/* Navigation styling to make sure it is above the semi-transparent box */
+nav {
+    position: fixed;
+    z-index: 10; /* Place above the semi-transparent box */
+
+}
+
+nav ul li a {
+    color : #fff;
+    text-decoration : none;
+    font-size : 25px;
+    position : fixed;
+    position: relative;
+    }
+
+    /*-----Roadmap Page------*/
+section {margin-top: 100vh; /* Add this to push the next section below the header */
+    z-index: 1;}
+
+#roadmap {
+    padding: 200px;
+    background-image: url('assets/bg_pg2.png'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+}
+
+.roadmap-container {
+    text-align: center;
+    color: #000000;
+}
+
+h2 {
+    font-size: 3.4rem;
+    margin-bottom: 100px;
+    font-family: 'Franklin Gothic Medium';
+    font-weight: bold;
+}
+
+.timeline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.timeline-item {
+    flex-basis: 20%;
+    text-align: center;
+    padding: 10px;
+}
+
+.timeline-item h3 {
+    font-size: 1rem;
+    margin-bottom: 100px;
+    padding-right: 20px;
+}
+
+.timeline-item span {
+    display: block;
+    font-size: 1rem;
+}
+
+.timeline:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+    top: 50%;
+    left: -20%;
+    z-index: 1;
+}
+
+.timeline-item:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #000000;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.timeline-item:nth-child(1):before {
+    left: 10%;
+}
+
+.timeline-item:nth-child(2):before {
+    left: 35%;
+}
+
+.timeline-item:nth-child(3):before {
+    left: 60%;
+}
+
+.timeline-item:nth-child(4):before {
+    left: 85%;
+}
+
+
+/*----PROJECTS----*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+:root {
+  --primary: #ffffff;
+  --white: #ffffff;
+  background-image: url(images/bg_pg03.png);
+  background-position: center;
+  background-size: cover;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Garet', sans-serif;
+  scroll-behavior: smooth;
+  font-style: italic;
+}
+
+@media (min-width: 1440px) {
+  html {
+    zoom: 1.5;
+  }
+}
+
+@media (min-width: 2560px) {
+  html {
+    zoom: 1.7;
+  }
+}
+
+@media (min-width: 3860px) {
+  html {
+    zoom: 2.5;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 1.3rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background: #797979;
+  transition: all 0.5s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #222224;
+}
+
+::-webkit-scrollbar-track {
+  background: #f9f9f9;
+}
+
+body {
+  font-size: 1.6rem;
+  background: var(--bg);
+}
+
+.container-slider {
+  max-width: 124rem;
+  padding: 0 0rem;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 3rem;
+  color: var(--primary);
+  padding: 2rem 0;
+}
+
+#tranding {
+  padding: 1rem 0;
+}
+
+@media (max-width:1440px) {
+  #tranding {
+    padding: 5rem 0;
+  }
+}
+
+#tranding .tranding-slider {
+  height: 35rem;
+  padding: 1rem 0;
+  position: relative;
+  bottom: 10px;
+}
+
+@media (max-width:500px) {
+  #tranding .tranding-slider {
+    height: 45rem;
+  }
+}
+
+.tranding-slide {
+  width: 38rem;
+  height: 42rem;
+  position: relative;
+}
+
+@media (max-width:500px) {
+  .tranding-slide {
+    width: 28rem !important;
+    height: 36rem !important;
+  }
+  .tranding-slide .tranding-slide-img img {
+    width: 28rem !important;
+    height: 36rem !important;
+  }
+}
+
+.tranding-slide .tranding-slide-img img {
+  width: 37rem;
+  height: 30rem;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+.tranding-slide .tranding-slide-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 125px;
+}
+
+.tranding-slide-content .food-price {
+  position: absolute;
+  top: 80rem;
+  right: 2rem;
+  color: var(--white);
+}
+
+.tranding-slide-content .tranding-slide-content-bottom {
+  position: absolute;
+  bottom: 0rem;
+  left: 2rem;
+  color: var(--white);
+}
+
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+}
+
+.tranding-slider-control {
+  position: relative;
+  bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tranding-slider-control .swiper-button-next {
+  left: 58% !important;
+  transform: translateX(-58%) !important;
+  top: 122%;
+}
+
+.tranding-slider-control .swiper-button-prev {
+  top: 122%;
+}
+
+@media (max-width:990px) {
+  .tranding-slider-control .swiper-button-next {
+    left: 70% !important;
+    transform: translateX(-70%) !important;
+  }
+}
+
+@media (max-width:450px) {
+  .tranding-slider-control .swiper-button-next {
+    left: 80% !important;
+    transform: translateX(-80%) !important;
+  }
+}
+
+@media (max-width:990px) {
+  .tranding-slider-control .swiper-button-prev {
+    left: 30% !important;
+    transform: translateX(-30%) !important;
+  }
+}
+
+@media (max-width:450px) {
+  .tranding-slider-control .swiper-button-prev {
+    left: 20% !important;
+    transform: translateX(-20%) !important;
+  }
+}
+
+.tranding-slider-control .slider-arrow {
+  background: var(--white);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  left: 42%;
+  transform: translateX(-42%);
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+.tranding-slider-control .slider-arrow::after {
+  content: '';
+}
+
+.tranding-slider-control .swiper-pagination {
+  position: relative;
+  width: 15rem;
+  bottom: -8px;
+}
+
+.tranding-slider-control .swiper-pagination .swiper-pagination-bullet {
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+.tranding-slider-control .swiper-pagination .swiper-pagination-bullet-active {
+  background: var(--primary);
+}
+
+.see-more-container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-see-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: small;
+  font-family: 'Garet', sans-serif;
+  font-style: bold;
+  font-size: 1.2rem;
+  margin: 0 auto; /* Center horizontally */
+  margin-top: -10px;
+  width: 100px;
+  height: 10px;
+  border: 1px solid #1C1C1C;
+  background-color: #1C1C1C;
+  border-radius: 40px;
+  padding: 12px 12px;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.5s;
+}
+.btn-see-more:hover {
+  background-color: #333333;
+  color: #f5f5f5;
+}
+
+
+/*--------ABOUT ME PAGE--------*/
+#aboutme {
+    padding: 200px;
+    background-image: url('assets/bg_pg2.png'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.aboutme-col-1 {
+    flex-basis: 20%;
+}
+
+.aboutme-col-1 img{
+    width: 100%;
+}
+
+.aboutme-col-2 {
+    flex-basis: 60%;
+}
+
+.subtitle{
+    font-size: 60px;
+    font-weight: 60px;
+    color: #000000;
+}
+
+/*------Contact------*/
+.contact-left{
+    flex-basis: 35%;
+  }
+  .contact-right{
+    flex-basis: 60%;
+  }
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color:#12f443;
+    margin-right:15 px;
+    font-size: 25px;
+
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px; 
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{ 
+    color: #000000;  
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background: #000000;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;    
+}
+form.btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+#msg{
+    color: #1C1C1C;
+    margin-top: -40px;
+    display: block;
+
+}
+
+
+
